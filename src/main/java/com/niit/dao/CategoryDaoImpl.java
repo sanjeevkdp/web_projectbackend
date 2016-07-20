@@ -1,4 +1,4 @@
-package com.niit.Dao;
+package com.niit.dao;
 
 import java.util.List;
 
@@ -12,12 +12,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.niit.model.Category;
 
 @Repository("categoryDao")
-public class CategoryDaoIm implements CategoryDao{
+public class CategoryDaoImpl implements CategoryDao{
 
 	@Autowired
 		private SessionFactory sessionFactory;
 
-	public CategoryDaoIm(SessionFactory sessionFactory) {
+	public CategoryDaoImpl(SessionFactory sessionFactory) {
 			this.sessionFactory = sessionFactory;
 
 		}
@@ -29,18 +29,18 @@ public class CategoryDaoIm implements CategoryDao{
 		}
 
 	@Transactional
-		public void delete(String cid) {
+		public void delete(String id) {
 			Category catToDelete = new Category();
-			catToDelete.setCId(cid);
+			catToDelete.setId(id);
 			sessionFactory.getCurrentSession().delete(catToDelete);
 
 		}
 
 	@Transactional
-		public Category get(String cid) {
+		public Category get(String id) {
 
-			// sessionFactory.getCurrentSession().get(Category.class,cid);
-			String hql = "from Category where CId=" + "'" + cid + "'";
+			// sessionFactory.getCurrentSession().get(Category.class,id);
+			String hql = "from Category where Id=" + "'" + id + "'";
 			Query query =(Query) sessionFactory.getCurrentSession().createQuery(hql);
 			List<Category> listcategory = (List<Category>) query.getResultList();
 			if (listcategory != null && !listcategory.isEmpty()) {

@@ -1,4 +1,4 @@
-package com.niit.Dao;
+package com.niit.dao;
 
 import org.springframework.stereotype.Repository;
 

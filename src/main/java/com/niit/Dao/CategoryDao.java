@@ -1,16 +1,14 @@
-package com.niit.Dao;
+package com.niit.dao;
 
 import java.util.List;
-import org.springframework.stereotype.Repository;
-
 import com.niit.model.Category;
 
 public interface CategoryDao {
 	void saveOrUpdate(Category category);
 
-	void delete(String cid);
+	void delete(String id);
 
-	Category get(String cid);
+	Category get(String id);
 
 	public List<Category> list();
 

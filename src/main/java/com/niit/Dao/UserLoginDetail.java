@@ -1,4 +1,4 @@
-package com.niit.Dao;
+package com.niit.dao;
 
 public class UserLoginDetail {
 	private String email;

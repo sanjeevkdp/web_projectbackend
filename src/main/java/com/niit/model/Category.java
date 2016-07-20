@@ -11,21 +11,28 @@ import org.springframework.stereotype.Component;
 @Component
 public class Category {
 	@Id
-	private String cid;
-	private String cname;
+	private String id;
+	private String name;
+	private String brand;
 	
 	
-	public String getCId() {
-		return cid;
+	public String getId() {
+		return id;
 	}
-	public void setCId(String cid) {
-		this.cid = cid;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getCName() {
-		return cname;
+	public String getName() {
+		return name;
 	}
-	public void setCName(String cname) {
-		this.cname = cname;
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 
 }

@@ -13,6 +13,21 @@ public class Product {
 	@Id
 	private String id;
 	private String name;
+	private double price;
+	private String imgUrl;
+	private int quantity;
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public String getImgUrl() {
+		return imgUrl;
+	}
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
 	public String getId() {
 		return id;
 	}
@@ -24,6 +39,12 @@ public class Product {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 }

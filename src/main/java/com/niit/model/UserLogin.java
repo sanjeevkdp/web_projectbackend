@@ -12,8 +12,7 @@ import org.springframework.stereotype.Component;
 public class UserLogin {
 	@Id
 	private String id;
-	
-	private String name;
+    private String name;
 	private String email;
 	private String password;
 	private String contact;

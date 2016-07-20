@@ -2,10 +2,10 @@ package com.niit.webproject.test;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.niit.Dao.CategoryDao;
+import com.niit.dao.CategoryDao;
 import com.niit.model.Category;
 
-public class Test {
+public class CategoryTest {
 
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
@@ -15,8 +15,9 @@ public class Test {
 	Category category = (Category) context.getBean("category");
 	
 	CategoryDao categoryDao = (CategoryDao) context.getBean("categoryDao");
-		category.setCId("002");
-		category.setCName("ahmad");
+		category.setId("002");
+		category.setName("redmenote");
+		category.setBrand("MI");
 
 		categoryDao.saveOrUpdate(category);
 
